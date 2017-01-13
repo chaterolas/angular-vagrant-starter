@@ -36,9 +36,6 @@ echo "export PATH=$HOME/.rbenv/bin:$PATH" >> $HOME/.bashrc
 echo 'eval "$(rbenv init -)"' >> $HOME/.bashrc
 chown -R vagrant:vagrant $HOME/.rbenv
 echo "DONE INSTALLING RBENV"
-exec $SHELL
-
-export HOME=/home/vagrant
 
 # Installing ruby build
 echo "INSTALLING RUBY_BUILD..."
@@ -46,12 +43,11 @@ git clone git://github.com/sstephenson/ruby-build.git $HOME/.rbenv/plugins/ruby-
 echo "export PATH=$HOME/.rbenv/plugins/ruby-build/bin:$PATH" >> $HOME/.bashrc
 chown -R vagrant:vagrant $HOME/.rbenv/plugins
 echo "DONE INSTALLING RUBY BUILD"
-exec $SHELL
 
 
 # Installing Ruby
 echo "INSTALLING RUBY..."
-rbenv install 2.3.0
-rbenv global 2.3.0
-rbenv rehash
+# rbenv install 2.3.0
+# rbenv global 2.3.0
+# rbenv rehash
 echo "DONE INSTALLING RUBY"
